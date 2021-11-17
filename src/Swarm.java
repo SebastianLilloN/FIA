@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Swarm {
 
   private ArrayList<Agent> group = null;
-  private int quantityAgents = 20;
+  private int quantityAgents = 100;
   private int T = 100;
   private double stepSize;
   private int exit = 0;

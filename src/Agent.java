@@ -54,7 +54,6 @@ public class Agent {
 
   protected boolean isFeasibleCapability() {
     int sum = 0;
-    System.out.println(dimension);
     for (int j = 0; j < dimension; j++) {
       sum = sum + (idea[j] * weigths[0][j]);
     }
