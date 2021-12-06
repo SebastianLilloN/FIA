@@ -37,14 +37,14 @@ public class Agent {
   }
 
   protected boolean isFeasibleMultidimentionalCapability() {
-    int[] sum = new int[dimension];
+    int[] sum = new int[capacity.length];
     boolean feasible = true;
-    for (int h = 0; h < dimension; h++) {
+    for (int h = 0; h < capacity.length; h++) {
       for (int j = 0; j < dimension; j++) {
         sum[h] = sum[h] + (idea[j] * weigths[h][j]);
       }
     }
-    for (int k = 0; k < dimension; k++) {
+    for (int k = 0; k < capacity.length; k++) {
       if (sum[k] > capacity[k]) {
         feasible = false;
       }

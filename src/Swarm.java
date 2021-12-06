@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Swarm {
 
   private ArrayList<Agent> group = null;
-  private int quantityAgents = 100;
+  private int quantityAgents = 20;
   private int T = 100;
   private double stepSize;
   private int exit = 0;
@@ -48,7 +48,7 @@ public class Swarm {
       for (int i = 0; i < quantityAgents; i++) {
         if (group.get(i).isBest()) {
 
-          group.get(i).move1(group.get(i)); // Mandar el mejor agente
+          group.get(i).move1(group.get(i));
         } else {
           do {
             j = StdRandom.uniform(quantityAgents);
@@ -69,7 +69,6 @@ public class Swarm {
           group.get(i).move2(a, group.get(j), prom, stepSize);
         }
       }
-      // System.out.println("Iteracion n°: " + t);
       t = t + 1;
     }
     long end = System.currentTimeMillis();
